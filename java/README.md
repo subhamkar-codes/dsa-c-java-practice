@@ -15,6 +15,9 @@ This folder contains Java versions of my Data Structures and Algorithms practice
 | `BinarySearch.java` | Binary search |
 | `LinkedListTraversal.java` | Linked list traversal |
 | `LinkedListInsertion.java` | Linked list insertion |
+| `LinkedListDeletion.java` | Linked-list deletion: first node, zero-based index, last node, and by value |
+
+The Java version handles empty lists and invalid indexes. Deleting the head takes O(1); deleting by index, from the end, or by value takes O(n).
 
 Each Java file is a standalone program with its own `main` method.
 
