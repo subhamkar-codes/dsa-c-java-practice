@@ -15,6 +15,7 @@ This folder contains my Data Structures and Algorithms practice programs written
 | `12_binarySearch.c` | Binary search |
 | `14_LinkedList.c` | Linked list traversal |
 | `15_linkedListInsertion.c` | Linked list insertion |
+| `18_linkedList_deletation.c` | Linked-list deletion: first node, index, last node, and by value |
 
 Each file is a separate program. Compile and run one at a time.
 
