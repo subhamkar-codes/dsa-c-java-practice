@@ -16,6 +16,7 @@ This folder contains my Data Structures and Algorithms practice programs written
 | `14_LinkedList.c` | Linked list traversal |
 | `15_linkedListInsertion.c` | Linked list insertion |
 | `18_linkedList_deletation.c` | Linked-list deletion: first node, index, last node, and by value |
+| `20_circular_linkedlist.c` | Circular linked-list traversal, insertion, and deletion |
 
 Each file is a separate program. Compile and run one at a time.
 
@@ -30,17 +31,24 @@ gcc .\array_insertion.c -o .\array_insertion.exe
 .\array_insertion.exe
 ```
 
+To run the circular linked-list example:
+
+```powershell
+gcc .\20_circular_linkedlist.c -o .\circular_linkedlist.exe
+.\circular_linkedlist.exe
+```
+
 On macOS or Linux:
 
 ```bash
-gcc array_insertion.c -o array_insertion
-./array_insertion
+gcc 20_circular_linkedlist.c -o circular_linkedlist
+./circular_linkedlist
 ```
 
-Replace `array_insertion.c` with another source filename to run a different program. `timecomplx/problem2.c` is currently empty and has no program to compile.
 
 ## Notes
 
 - `11_array_deletion.c` currently shifts the values and then writes the supplied element into the deleted position. Check the code when studying the deletion logic.
 - `12_binarySearch.c` contains a linear-search loop after a return statement, so that loop is unreachable.
+- The expanded `20_circular_linkedlist.c` example covers insertion at the beginning, end, index, and after a value; and deletion from the beginning, end, index, and by value.
 - These programs are for learning and practicing DSA concepts.
