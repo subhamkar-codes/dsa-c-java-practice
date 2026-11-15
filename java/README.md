@@ -15,9 +15,8 @@ This folder contains Java versions of my Data Structures and Algorithms practice
 | `BinarySearch.java` | Binary search |
 | `LinkedListTraversal.java` | Linked list traversal |
 | `LinkedListInsertion.java` | Linked list insertion |
-| `LinkedListDeletion.java` | Linked-list deletion: first node, zero-based index, last node, and by value |
-
-The Java version handles empty lists and invalid indexes. Deleting the head takes O(1); deleting by index, from the end, or by value takes O(n).
+| `LinkedListDeletion.java` | Singly linked-list deletion |
+| `CircularLinkedList.java` | Circular linked-list traversal, insertion, and deletion |
 
 Each Java file is a standalone program with its own `main` method.
 
@@ -30,14 +29,14 @@ javac .\BinarySearch.java
 java BinarySearch
 ```
 
-Replace `BinarySearch` with another class name to run a different program. For example:
+For example, to run the circular linked-list program:
 
 ```powershell
-javac .\LinkedListInsertion.java
-java LinkedListInsertion
+javac .\CircularLinkedList.java
+java CircularLinkedList
 ```
 
-`ArrayADT` reads two integer values from the console.
+Replace the class name with another program to run it. `ArrayADT` reads two integer values from the console.
 
 ## Java features practiced
 
@@ -46,8 +45,15 @@ java LinkedListInsertion
 - `Arrays` helpers for searching and displaying arrays
 - Streams and lambdas
 - Exceptions for invalid indexes and input
+- Automatic memory management for linked-list nodes
 
 The manual implementations are included so I can learn how the algorithms work before relying on Java’s built-in collections.
+
+## Linked-list notes
+
+`LinkedListDeletion.java` handles empty lists and invalid indexes. Deleting the head takes O(1); deleting by index, from the end, or by value takes O(n).
+
+`CircularLinkedList.java` demonstrates insertion at the beginning, end, index, and after a value; and deletion from the beginning, end, index, and by value. Its indexes are zero-based. Because it stores only a head reference, operations that need to find the tail take O(n) time to reconnect the circle.
 
 ## Translation notes
 
