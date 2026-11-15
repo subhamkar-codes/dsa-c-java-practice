@@ -1,60 +1,77 @@
-# DSA Practice in C and Java
+# Circular Singly Linked List in C and Java
 
-This repository tracks my progress learning data structures and algorithms in C and carrying the same concepts into Java. It contains practice programs, Java translations, and notes on time and space complexity.
+This folder contains complete C and Java examples based on `20_circular_linkedlist.c`. The original sample showed traversal and insertion at the beginning; these versions add common insertion and deletion operations.
 
-## Repository structure
+## Folder structure
 
 ```text
-dsa-c-java-practice/
-├── c/       # C practice programs
-├── java/    # Java versions and Java-specific examples
-└── README.md
+CircularLinkedList/
+├── c/
+│   └── README.md
+└── java/
+    └── README.md
 ```
 
-## Topics
+## Circular-list rule
 
-- Array ADT, insertion, and deletion
-- Linear search and binary search
-- Singly linked list traversal and insertion
-- Basic time and space complexity examples
+An empty list has `head == NULL` in C and `head == null` in Java. In a non-empty list, the last node points back to the head. For one node, that node points to itself. Traversal therefore stops when it reaches the head again, rather than when `next` is null.
 
-## C and Java versions
+## Operations included
 
-Where possible, each Java program follows the corresponding C program so I can compare the syntax and understand how the same algorithm works in both languages. The Java versions also demonstrate features such as `Scanner`, `Arrays` utilities, Streams, and input validation.
+### Insertion
 
-Some translations include small corrections or improvements, which are noted in the relevant source files. For example, the supplied C array-deletion program overwrites the deleted position; its Java version performs an actual deletion. The supplied `timecomplx/problem2.c` file was empty, so its Java counterpart is only a placeholder.
+- At the beginning
+- At the end
+- At a zero-based index (`0` through the current length; inserting at the length appends)
+- After the first node containing a target value
 
-## Running the programs
+### Deletion
 
-Each program is standalone. Compile and run the file you want to practice.
+- First node
+- Last node
+- At a zero-based index (`0` through `length - 1`)
+- First node containing a target value
 
-### C
+The sample `main` runs all eight operations. Index operations use zero-based positions in both languages. C reports invalid insert/delete requests and leaves the list unchanged; Java throws an exception for invalid indexes or missing insertion targets. Deleting a missing value in Java also throws an exception.
 
-From the `c` folder:
+## Complexity
 
-```bash
-gcc array_insertion.c -o array_insertion
-./array_insertion
-```
+These implementations keep only a `head` reference, so they may need to scan the list to find the tail or a target node.
 
-On Windows PowerShell:
+| Operation | Time | Extra space |
+| --- | --- | --- |
+| Display / length | O(n) | O(1) |
+| Insert at beginning / end | O(n) | O(1) per inserted node |
+| Insert at index / after value | O(n) | O(1) per inserted node |
+| Delete first / last / at index / by value | O(n) | O(1) |
+
+Keeping a tail reference in the list structure could make insertion at the beginning and end O(1), but this example uses a head reference to match the original lesson.
+
+## Run the C version
+
+From the `c` folder, using GCC in Windows PowerShell:
 
 ```powershell
-gcc .\array_insertion.c -o .\array_insertion.exe
-.\array_insertion.exe
+gcc .\20_circular_linkedlist.c -o .\circular_list.exe
+.\circular_list.exe
 ```
 
-### Java
-
-From the `java` folder:
+On macOS or Linux:
 
 ```bash
-javac BinarySearch.java
-java BinarySearch
+gcc 20_circular_linkedlist.c -o circular_list
+./circular_list
 ```
 
-Replace `BinarySearch` with the class name of another program. A JDK is required.
+The C program frees every remaining node before exiting.
 
-## Learning notes
+## Run the Java version
 
-I’m using this repository to strengthen my understanding of DSA while practicing in both C and Java. The focus is on implementing the algorithms myself and understanding their complexity, not only using built-in collections.
+From the `java` folder, with a JDK installed:
+
+```powershell
+javac .\CircularLinkedList.java
+java CircularLinkedList
+```
+
+Java automatically reclaims removed nodes, so there is no `free` call.
