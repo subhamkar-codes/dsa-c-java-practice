@@ -13,10 +13,11 @@ This folder contains Java versions of my Data Structures and Algorithms practice
 | `ArrayADT.java` | Array ADT and console input |
 | `LinearSearch.java` | Linear search |
 | `BinarySearch.java` | Binary search |
-| `LinkedListTraversal.java` | Linked list traversal |
-| `LinkedListInsertion.java` | Linked list insertion |
+| `LinkedListTraversal.java` | Singly linked-list traversal |
+| `LinkedListInsertion.java` | Singly linked-list insertion |
 | `LinkedListDeletion.java` | Singly linked-list deletion |
 | `CircularLinkedList.java` | Circular linked-list traversal, insertion, and deletion |
+| `DoublyLinkedList.java` | Doubly linked-list traversal, insertion, and deletion |
 
 Each Java file is a standalone program with its own `main` method.
 
@@ -29,11 +30,14 @@ javac .\BinarySearch.java
 java BinarySearch
 ```
 
-For example, to run the circular linked-list program:
+To run the linked-list programs:
 
 ```powershell
 javac .\CircularLinkedList.java
 java CircularLinkedList
+
+javac .\DoublyLinkedList.java
+java DoublyLinkedList
 ```
 
 Replace the class name with another program to run it. `ArrayADT` reads two integer values from the console.
@@ -55,6 +59,8 @@ The manual implementations are included so I can learn how the algorithms work b
 
 `CircularLinkedList.java` demonstrates insertion at the beginning, end, index, and after a value; and deletion from the beginning, end, index, and by value. Its indexes are zero-based. Because it stores only a head reference, operations that need to find the tail take O(n) time to reconnect the circle.
 
+`DoublyLinkedList.java` demonstrates insertion and deletion at the beginning, end, a zero-based index, and by value. It displays the list forward and backward, with each traversal limited to 100 nodes to prevent an infinite loop.
+
 ## Translation notes
 
-Some Java versions include safety checks or corrections, noted in their source code. For example, `ArrayDeletion.java` performs an actual deletion, while the supplied C version writes a value into the deleted position.
+Some Java versions include safety checks or corrections, noted in their source code. For example, `ArrayDeletion.java` performs an actual deletion, while the supplied C version writes a value into the deleted position. The corrected doubly linked-list example also fixes a cycle and disconnected node in the original C code.
