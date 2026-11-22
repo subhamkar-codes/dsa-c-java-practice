@@ -18,6 +18,7 @@ This folder contains Java versions of my Data Structures and Algorithms practice
 | `LinkedListDeletion.java` | Singly linked-list deletion |
 | `CircularLinkedList.java` | Circular linked-list traversal, insertion, and deletion |
 | `DoublyLinkedList.java` | Doubly linked-list traversal, insertion, and deletion |
+| `StackInArray.java` | Array-based stack setup; manually adds three values and checks empty/full status | 
 
 Each Java file is a standalone program with its own `main` method.
 
