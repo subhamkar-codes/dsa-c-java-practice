@@ -18,7 +18,7 @@ This folder contains my Data Structures and Algorithms practice programs written
 | `18_linkedList_deletation.c` | Linked-list deletion: first node, index, last node, and by value |
 | `20_circular_linkedlist.c` | Circular linked-list traversal, insertion, and deletion |
 | `21_DoublyLinkedList.c` | Doubly linked-list traversal, insertion, and deletion |
-
+| `24_StackInArray.c` | Array-based stack setup; manually adds three values and checks whether the stack is empty or full | 
 Each file is a separate program. Compile and run one at a time.
 
 ## Compile and run
