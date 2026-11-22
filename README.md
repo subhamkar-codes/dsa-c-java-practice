@@ -6,11 +6,11 @@ This folder contains corrected C and Java implementations based on `21_DoublyLin
 
 ```text
 DoublyLinkedList/
+
 ├── c/
-│   ├── 21_DoublyLinkedList.c
 │   └── README.md
+│
 └── java/
-    ├── DoublyLinkedList.java
     └── README.md
 ```
 
